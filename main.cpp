@@ -7,7 +7,7 @@
 #include <fstream>
 #include <memory.h>
 
-#define LOG(x, ...) printf(x "\n" __VA_OPT__(,) __VA_ARGS__);
+#define LOG(x, ...) printf(x "\n", ## __VA_ARGS__);
 
 int WW = 800, WH = 600;
 
